@@ -1,18 +1,3 @@
-// let helloPromise = new Promise((resolve, reject) => {
-//     setTimeout(function() {
-//         resolve("Hello!")
-//         // Or can rejct
-//         reject({message: "Could not find data"})
-//     }, 1000)
-// });
-
-// helloPromise.then(message => {
-//     console.log("Promise is finally done after so many secs and adds to this message + " + message);
-// });
-
-// console.log("Goodbye! prints first even though it's on the last line")
-
-
 let helloPromise = new Promise((resolve, reject) => {
     setTimeout(() => resolve("Hello!"), 1000);
   });

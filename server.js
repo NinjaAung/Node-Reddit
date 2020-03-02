@@ -1,4 +1,3 @@
-
 const express = require('express')
 const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
@@ -57,12 +56,6 @@ require('./controllers/replies.js')(app);
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-
-
-// app.get('/', (req, res) => res.send('Hello World!'))
-
-// app.get('/', (req, res) => res.render('posts-index'))
-
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
