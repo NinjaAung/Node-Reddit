@@ -57,7 +57,9 @@ require('./controllers/replies.js')(app);
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+const port = process.env.PORT
+app.listen(port, () => console.log(`Reddit app listening on port ${port}!`))
+
 
 
 module.exports = app;

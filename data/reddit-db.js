@@ -1,12 +1,12 @@
 /* Mongoose Connection */
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 assert = require("assert");
-const url = process.env.MONGODB_URI
-mongoose.connect(url)
+const mongo_uri = process.env.MONGODB_URI
+mongoose.connect(mongo_uri)
 
 mongoose.Promise = global.Promise;
 mongoose.connect(
-    url,
+    mongo_uri,
   { useNewUrlParser: true },
   function(err, db) {
     assert.equal(null, err);
