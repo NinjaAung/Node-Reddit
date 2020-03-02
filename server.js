@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 
 const app = express()
-const port = 3000
+const port = process.env.PORT
 
 
 
@@ -57,7 +57,6 @@ require('./controllers/replies.js')(app);
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-const port = process.env.PORT
 app.listen(port, () => console.log(`Reddit app listening on port ${port}!`))
 
 
