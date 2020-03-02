@@ -4,8 +4,6 @@ assert = require("assert");
 const url = process.env.MONGODB_URI
 mongoose.connect(url)
 
-const url = "mongodb://localhost/reddit-db";
-
 mongoose.Promise = global.Promise;
 mongoose.connect(
     url,
